@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large official statistics file (add locally; see data/apy/README.txt)
+data/apy/district_apy.csv

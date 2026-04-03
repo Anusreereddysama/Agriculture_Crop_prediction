@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict — Smart Crop Recommendation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">🌿 Smart Agriculture</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="predict.html">Predict</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Soil &amp; weather</h1>
+    <p class="hero-lead">Use your location or city for weather, or type everything manually.
+    <strong>Use my location</strong> also saves GPS for district yield charts (Phase 2 CSV).</p>
+</section>
+
+<div class="container">
+    <div class="card form-card wide">
+        <h2>Inputs</h2>
+
+        <div class="btn-row">
+            <button type="button" class="secondary-btn" id="btn-geo">
+                <i class="fa-solid fa-location-crosshairs"></i> Use my location (weather)
+            </button>
+            <button type="button" class="secondary-btn" id="btn-city">
+                <i class="fa-solid fa-city"></i> Fetch by city
+            </button>
+        </div>
+
+        <div class="input-group" id="city-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+            <input id="city" type="text" placeholder="City name (e.g. Bengaluru)" autocomplete="off">
+        </div>
+        <p class="hint-text" id="weather-hint"></p>
+
+        <h3 class="subsection-title">Soil (manual)</h3>
+        <button type="button" class="secondary-btn" id="btn-estimate-npk" style="margin-top: 8px; width: 100%;">
+            Auto-estimate NPK (estimate)
+        </button>
+        <div class="grid">
+            <div class="input-group">
+                <i class="fa-solid fa-flask"></i>
+                <input id="N" type="number" step="any" placeholder="Nitrogen (N)" />
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-flask"></i>
+                <input id="P" type="number" step="any" placeholder="Phosphorus (P)" />
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-flask"></i>
+                <input id="K" type="number" step="any" placeholder="Potassium (K)" />
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-seedling"></i>
+                <input id="ph" type="number" step="any" placeholder="Soil pH" />
+            </div>
+        </div>
+
+        <h3 class="subsection-title">Weather</h3>
+        <div class="grid">
+            <div class="input-group">
+                <i class="fa-solid fa-temperature-high"></i>
+                <input id="temp" type="number" step="any" placeholder="Temperature (°C)" />
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-droplet"></i>
+                <input id="humidity" type="number" step="any" placeholder="Humidity (%)" />
+            </div>
+            <div class="input-group full-width">
+                <i class="fa-solid fa-cloud-rain"></i>
+                <input id="rainfall" type="number" step="any" placeholder="Rainfall (mm) — see recent rain note from API or enter seasonal" />
+            </div>
+        </div>
+
+        <button type="button" class="primary-btn" id="btn-predict">
+            Get recommendations
+        </button>
+        <p class="hint-text" id="predict-error" style="color:#c0392b;"></p>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <p>Server-side OpenWeather: set <code>OPENWEATHER_API_KEY</code> in project <code>.env</code>.</p>
+</footer>
+
+<script src="common.js?v=20260326b"></script>
+<script src="predict.js?v=20260326b"></script>
+</body>
+</html>

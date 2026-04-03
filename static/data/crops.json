@@ -1,0 +1,33 @@
+{
+  "rice": {
+    "name": "Rice",
+    "overview": "Rice is a water-responsive cereal suited to warm, humid climates with reliable water availability. Suitability depends strongly on temperature, humidity, soil reaction (pH), and water balance alongside NPK status.",
+    "irrigation": "Where rainfall is insufficient, maintain shallow flooded or saturated soil during vegetative stages; reduce water depth toward maturity. Follow local extension schedules for your district—canal timing and water-release rules vary across southern states.",
+    "water_note": "High rainfall × humidity combinations often align with rice systems, but avoid waterlogging without drainage planning."
+  },
+  "maize": {
+    "name": "Maize",
+    "overview": "Maize responds to balanced NPK and adequate soil moisture through the growing season; heat and moisture stress during flowering hurt yield.",
+    "irrigation": "Irrigate at knee-high, tasseling/silking, and grain filling if rains fail—split N applications per soil test where possible."
+  },
+  "cotton": {
+    "name": "Cotton",
+    "overview": "Cotton needs a long frost-free period and careful water management—too much rain at open boll can hurt fibre quality.",
+    "irrigation": "Common approach: limited irrigation during squaring and peak bloom; avoid excess humidity where boll rot is prevalent."
+  },
+  "mungbean": {
+    "name": "Mungbean (Green gram)",
+    "overview": "Short-duration legume; often grown with residual moisture or light irrigation. As a legume, it can contribute to nitrogen balance in rotation.",
+    "irrigation": "Light, infrequent irrigation if needed; avoid waterlogging."
+  },
+  "blackgram": {
+    "name": "Black gram (Urad)",
+    "overview": "Warm-season pulse; sensitive to waterlogging. Often used in rice fallows in southern systems when drainage is adequate.",
+    "irrigation": "Minimal irrigation—only to establish or relieve moisture stress at flowering/pod fill."
+  },
+  "pigeonpeas": {
+    "name": "Pigeon pea (Red gram / Tur)",
+    "overview": "Deep-rooted pulse suited to semi-arid to sub-humid conditions; long-duration varieties need planned moisture through pod development.",
+    "irrigation": "Often rainfed; one or two protective irrigations during flowering and pod filling if soil moisture collapses."
+  }
+}

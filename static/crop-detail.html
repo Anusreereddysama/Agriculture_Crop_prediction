@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop detail — Smart Crop Recommendation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+    <script src="common.js?v=20260326b" defer></script>
+    <script src="crop-detail.js?v=20260326b" defer></script>
+</head>
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">🌿 Smart Agriculture</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="predict.html">Predict</a></li>
+        <li><a href="recommendations.html">Results</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1 id="crop-title">Crop</h1>
+    <p class="hero-lead" id="crop-sub"></p>
+</section>
+
+<div class="container">
+    <div class="card wide detail-card">
+        <h2><i class="fa-solid fa-book-open"></i> Overview</h2>
+        <p id="overview-text"></p>
+
+        <h2><i class="fa-solid fa-faucet-drip"></i> Irrigation</h2>
+        <p id="irrigation-text"></p>
+        <p class="hint-text" id="water-note"></p>
+
+        <h2 style="display:none;"><i class="fa-solid fa-chart-line"></i> Yield in your area</h2>
+        <p class="hint-text" id="yield-context" style="display:none;"></p>
+        <div class="placeholder-box" id="yield-placeholder" style="display:none;"></div>
+        <div class="chart-wrap" id="chart-panel" style="display:none;">
+            <canvas id="yield-chart" height="140"></canvas>
+        </div>
+
+        <div class="placeholder-box" id="region-fallback" style="display:none; margin-top: 16px;">
+            <h3 style="margin-top:0;">Enter your region to load yield</h3>
+            <p class="hint-text" style="margin-bottom: 10px;">
+                Automatic district match from GPS may fail. Type state and district manually (southern India supported when your APY file matches these names).
+            </p>
+            <div class="grid" style="grid-template-columns: 1fr;">
+                <div class="input-group">
+                    <i class="fa-solid fa-map"></i>
+                    <input id="region-state" placeholder="State (e.g., Telangana)" />
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input id="region-district" placeholder="District (e.g., Adilabad)" />
+                </div>
+            </div>
+            <button type="button" class="primary-btn" id="btn-load-region" style="margin-top: 12px; width: 100%;">Load yield chart</button>
+            <p class="hint-text" id="region-error" style="color:#c0392b; margin-top: 10px;"></p>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <p><a href="recommendations.html">← Back to recommendations</a></p>
+</footer>
+</body>
+</html>

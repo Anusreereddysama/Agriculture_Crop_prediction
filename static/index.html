@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Crop Recommendation — India pilot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-landing">
+<nav class="navbar">
+    <a href="index.html" class="logo">🌿 Smart Agriculture</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="predict.html">Predict</a></li>
+    </ul>
+</nav>
+
+<section class="hero hero-landing">
+    <h1>AI-assisted crop recommendation</h1>
+    <p class="hero-lead">
+        A practical pilot for Indian farmers: combine soil nutrients (N, P, K),
+        soil pH, and weather signals to rank suitable crops. Built for transparency—
+        you can always enter values manually or use location-based weather when configured.
+    </p>
+    <a href="predict.html" class="primary-btn btn-inline">Start prediction</a>
+</section>
+
+<section class="section-block">
+    <h2>What this project does</h2>
+    <div class="grid-3">
+        <div class="info-card">
+            <i class="fa-solid fa-leaf fa-2x" style="color:#2d6a4f;"></i>
+            <h3>Model</h3>
+            <p>RandomForest classifier trained on cleaned soil–weather–label data with
+            documented engineered features (nutrient totals, balance, climate interactions).</p>
+        </div>
+        <div class="info-card">
+            <i class="fa-solid fa-cloud-sun fa-2x" style="color:#2d6a4f;"></i>
+            <h3>Weather</h3>
+            <p>Optional fetch of current temperature and humidity via your server
+            (OpenWeather key in <code>.env</code>, never exposed in the browser).</p>
+        </div>
+        <div class="info-card">
+            <i class="fa-solid fa-chart-simple fa-2x" style="color:#2d6a4f;"></i>
+            <h3>Insights</h3>
+            <p>Ranked recommendations with crop detail pages for irrigation guidance.
+            District yield charts load from an official APY CSV you place locally (<code>data/apy/district_apy.csv</code>);
+            the app does not invent yield values.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-block alt">
+    <h2>How it works</h2>
+    <ol class="steps">
+        <li><strong>Soil &amp; weather</strong> — Enter N, P, K, pH, and weather (or use location / city fetch).</li>
+        <li><strong>Rankings</strong> — The model returns ranked crops with probabilities.</li>
+        <li><strong>Crop detail</strong> — Tap a crop for overview and irrigation notes (extension advice still applies).</li>
+    </ol>
+</section>
+
+<footer class="page-footer">
+    <p>India-focused pilot. Soil values are user‑supplied or future map estimates; they are not a substitute for a lab soil test.
+    Weather rainfall from APIs may be “recent rain” only—override when your crop model needs seasonal rainfall.</p>
+</footer>
+
+<script src="common.js?v=20260326b"></script>
+</body>
+</html>

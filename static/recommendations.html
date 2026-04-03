@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations — Smart Crop Recommendation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">🌿 Smart Agriculture</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="predict.html">Predict</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Recommended crops</h1>
+    <p class="hero-lead" id="season-line"></p>
+</section>
+
+<div class="results-container" id="results"></div>
+
+<div class="container" id="empty-state" style="display:none;">
+    <div class="card">
+        <p>No prediction run yet. <a href="predict.html">Go to Predict</a></p>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <p>Probabilities are model outputs; validate with local extension and trials.</p>
+</footer>
+
+<script src="common.js?v=20260326b"></script>
+<script src="recommendations.js?v=20260326b"></script>
+</body>
+</html>
